@@ -7,6 +7,16 @@
     <title>Laravel Migration Seeder</title>
 </head>
 <body>
-  @dump($trains)
+  {{-- @dump($trains) --}}
+  @forelse ($trains as $train)
+  <p>
+      {{$train}}
+  </p>
+
+  @empty
+<p>
+    Non ci sono treni
+</p>
+  @endforelse
 </body>
 </html>
